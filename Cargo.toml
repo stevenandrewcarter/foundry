@@ -1,0 +1,9 @@
+[package]
+name = "meeseeks_box"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rhai = "1.22.0"
+bollard = "*"
+tokio = { version = "1.46.1", features = ["rt", "rt-multi-thread", "macros"] }
