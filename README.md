@@ -1,9 +1,46 @@
 # Foundry
 
-> Spawn a worker that can complete a single task well, and then it will disappear.
+> Build Infrastructure end to end.
 
-Rust Project for running automation tools (Ansible, Terraform, etc.). With an additional Rust based version that will
-perform actions against a remote host as well.
+Foundry aims to be a alternative solution to Infrastructure as Code tooling. The
+main goals the project will attempt to provide is a rich base language, in this
+case Rust using Rhia scripting engine. In addition, it will attempt to provide
+a complete end to end solution, building the targets and performing configuration
+management on the targets as well.
+
+Foundry will provide a few concepts that will help a user deploy a solution on
+different types of environments. The concepts are _forging_ and _tempering_, which
+will be described in detail in the following sections.
+
+## Why Rust?
+
+Rust has gained a lot of popularity in recent years and has started to show itself
+as the clear winner when it comes to performance and stability. When considering
+IaC tooling performance may not always be a high concern, but stability is a 
+different matter. Rust is a staticly compiled language, which means a scripting
+engine would be preferred for the tool. IaC tools often feel like they need to 
+execute in a iterative manner to build solutions, so removing any compile time
+requirements is desired.
+
+## What about Ansilbe / Terraform?
+
+Ansible and Terraform are both IaC tools that focus on one aspect of a deployment
+and provide great tooling for that aspect. Ansible is great at configuration
+management, but is not pleasant for Infrastructure. Terraform has the opposite 
+problem in being great at defining the Infrastructure, but not the configuration
+management parts. Foundry will attempt to provide syntax and solutions for both
+types of requirements.
+
+## Foundry Concepts
+
+The following sections looks into how Foundry attempts to provide and End to End
+solution for Deployments.
+
+### Forging
+
+The
+
+
 
 The Project will be split into two components. The first component is a Task Runner that will execute Tasks against a
 configured remote instance. The Tasks will be simple to start with, but can perform more complex structures by using
