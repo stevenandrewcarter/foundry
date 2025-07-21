@@ -22,7 +22,7 @@ engine would be preferred for the tool. IaC tools often feel like they need to
 execute in a iterative manner to build solutions, so removing any compile time
 requirements is desired.
 
-## What about Ansilbe / Terraform?
+## What about Ansible / Terraform?
 
 Ansible and Terraform are both IaC tools that focus on one aspect of a deployment
 and provide great tooling for that aspect. Ansible is great at configuration
@@ -38,7 +38,22 @@ solution for Deployments.
 
 ### Forging
 
-The
+Forging will be the process of building the Infrastructure. It is an optional step
+that will define the type of Infrastructure being built, from network appliances
+to virtual machines to bare metal installations. Since most of these solutions
+can be highly vendor dependent, the solution aims to be flexible and provide a
+framework for building the components.
+
+A simple example is given below, which shows how to define the hosts and invoke 
+the Forge command to build the hosts
+
+```
+let hosts = ["host1", "host2"];
+forge(hosts, |h| {
+  // Configure hosts
+});
+```
+
 
 
 
