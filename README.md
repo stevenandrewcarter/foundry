@@ -51,6 +51,8 @@ the Forge command to build the hosts
 let hosts = ["host1", "host2"];
 forge(hosts, |h| {
   // Configure hosts
+  h.cpu = 2;
+  h.mem = 4;
 });
 ```
 
